@@ -21,6 +21,13 @@
       "env": {
         "GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github_token}"
       }
+    },
+    "puppeteer": {
+      "command": "docker",
+      "args": ["run", "-i", "--rm", "-e", "DOCKER_CONTAINER", "mcp/puppeteer"],
+      "env": {
+        "DOCKER_CONTAINER": "true"
+      }
     }
   }
 }
